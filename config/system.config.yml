@@ -1,0 +1,32 @@
+# Core
+db:
+  redis:
+    host: localhost
+    port: 6380
+    namespace: gateway-expressredis
+#plugins:
+# express-gateway-plugin-example:
+#   param1: 'param from system.config'
+
+crypto:
+  cipherKey: sensitiveKey
+  algorithm: aes256
+  saltRounds: 10
+
+# OAuth2 Settings
+session:
+  secret: keyboard cat
+  resave: false
+  saveUninitialized: false
+accessTokens:
+  timeToExpiry: 7200000
+  tokenType: "jwt"
+  issuer: "express-gateway"
+  audience: "something"
+  subject: "someone"
+  secretOrPrivateKey: "ssssst"
+
+refreshTokens:
+  timeToExpiry: 7200000
+authorizationCodes:
+  timeToExpiry: 300000
